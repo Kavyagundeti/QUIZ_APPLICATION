@@ -36,6 +36,11 @@
 <!--		<spring-security.version>6.3.1</spring-security.version>-->
 	</properties>
 	<dependencies>
+		<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
+</dependency>
 
 		<dependency>
 			<groupId>javax.mail</groupId>
@@ -136,6 +141,13 @@
 
 	<build>
 		<plugins>
+			<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <executable>true</executable>
+    </configuration>
+</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
